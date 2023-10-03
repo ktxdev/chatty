@@ -1,0 +1,16 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_URL}/${DB_NAME}?createDatabaseIfNotExist=true
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+app:
+  jwt:
+    secret: 'frMhVjk5nLsD2Uwa8zixau6TM2riSNMYp0JOi1N2LmY='
+    expiration-in-millis: 3_600_000
